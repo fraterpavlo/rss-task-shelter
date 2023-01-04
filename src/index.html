@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"About the shelter"
+	})
+	<body>
+		<div class="wrapper">
+			<main class="page main-page">
+				<div class="general-bg-wrap">
+					@@include('html/_header.htm',{})
+					<section class="not-only-section section">
+						<div class="not-only-section__container">
+							<div class="not-only-section__content-wrap">
+								<h2 class="not-only-section__title">Not only people <br> need a house</h2>
+								<p class="not-only-section__paragraph">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
+								<a href="#our-friends-section" class="not-only-section__button btn">Make a friend</a>
+							</div>
+						</div>
+					</section>
+				</div>
+				<section id="about-section" class="about-section section">
+					<div class="about-section__container">
+						<div class="about-section__img-wrap">
+							<img src="@img/about-section/about-section-pets.png" alt="about-section-pets" class="about-section__img">
+						</div>
+						<div class="about-section__text-content-wrap">
+							<h3 class="about-section__title">About the shelter “Cozy House”</h3>
+							<p class="about-section__paragraph1">Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them will find a family. The others will continue to live with us and will be waiting for a lucky chance to become dearly loved.</p>
+							<p class="about-section__paragraph2">We feed our wards with the best food and make sure that they do not get sick, feel comfortable (including psychologically) and well. We are supported by 87 volunteers and 28 employees of various skill levels. About 12% of the animals are taken by the shelter staff. Taking care of the animals, they become attached to the pets and would hardly ever leave them alone.</p>
+						</div>
+					</div>
+				</section>
+				<section id="our-friends-section" class="our-friends-section section">
+					<div class="our-friends-section__container">
+						<h3 class="our-friends-section__title">Our friends who <br>
+							are looking for a house</h3>
+						<div class="our-friends-section__slider-wrap friends-slider">
+							<button class="friends-slider__controls friends-slider__controls_left swiper-button-prev">&larr;</button>
+							<div class="friends-slider__view-window swiper-main-page swiper">
+								<div class="friends-slider__items-inner-container  swiper-wrapper">
+
+								</div>
+							</div>
+							<button class="friends-slider__controls friends-slider__controls_right swiper-button-next">&rarr;</button>
+						</div>
+						<a href="./our-friends.html" class="our-friends-section__know-rest-btn">Get to know the rest</a>
+					</div>
+				</section>
+				<section id="help-section" class="help-section section">
+					<div class="help-section__container">
+						<h3 class="help-section__title">How you can help
+							our shelter</h3>
+						<div class="help-section__help-options-wrap help-options">
+							<figure class="help-options__item">
+								<div class="help-options__ico _icon-pet-food"></div>
+								<figcaption class="help-options__text">Pet food</figcaption>
+							</figure>
+							<figure class="help-options__item">
+								<div class="help-options__ico _icon-transportation"></div>
+								<figcaption class="help-options__text">Transportation</figcaption>
+							</figure>
+							<figure class="help-options__item">
+								<div class="help-options__ico _icon-toys"></div>
+								<figcaption class="help-options__text">Toys</figcaption>
+							</figure>
+							<figure class="help-options__item">
+								<div class="help-options__ico _icon-bowls-and-cups"></div>
+								<figcaption class="help-options__text">Bowls and cups</figcaption>
+							</figure>
+							<figure class="help-options__item">
+								<div class="help-options__ico _icon-shampoos"></div>
+								<figcaption class="help-options__text">Shampoos</figcaption>
+							</figure>
+							<figure class="help-options__item">
+								<div class="help-options__ico _icon-vitamins"></div>
+								<figcaption class="help-options__text">Vitamins</figcaption>
+							</figure>
+							<figure class="help-options__item">
+								<div class="help-options__ico _icon-medicines"></div>
+								<figcaption class="help-options__text">Medicines</figcaption>
+							</figure>
+							<figure class="help-options__item">
+								<div class="help-options__ico _icon-collars-or-leashes"></div>
+								<figcaption class="help-options__text">Collars / leashes</figcaption>
+							</figure>
+							<figure class="help-options__item">
+								<div class="help-options__ico _icon-sleeping-area"></div>
+								<figcaption class="help-options__text">Sleeping areas</figcaption>
+							</figure>
+						</div>
+					</div>
+				</section>
+				<section class="in-addiction-section section">
+					<div class="in-addiction-section__container">
+						<div class="in-addiction-section__img-wrap">
+							<img src="@img/in-addiction-section/donation-dog.png" alt="donation-dog" class="in-addiction-section__img">
+						</div>
+						<div class="in-addiction-section__text-content-wrap">
+							<h3 class="in-addiction-section__title">You can also <br> make a donation</h3>
+							<p class="in-addiction-section__subtitle">Name of the bank / Type of bank account</p>
+							<a href="" class="in-addiction-section__card-number _icon-credit-card">8380 2880 8028 8791 7435</a>
+							<p class="in-addiction-section__legal-iformation">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>
+

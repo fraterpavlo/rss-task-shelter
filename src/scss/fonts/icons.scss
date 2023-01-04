@@ -1,0 +1,56 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: inline-block;
+	}
+}
+
+._icon-collars-or-leashes:before {
+  content: "\e900";
+}
+._icon-bowls-and-cups:before {
+  content: "\e901";
+}
+._icon-credit-card:before {
+  content: "\e902";
+}
+._icon-location-pin:before {
+  content: "\e903";
+}
+._icon-mail:before {
+  content: "\e904";
+}
+._icon-medicines:before {
+  content: "\e905";
+}
+._icon-pet-food:before {
+  content: "\e906";
+}
+._icon-phone:before {
+  content: "\e907";
+}
+._icon-shampoos:before {
+  content: "\e908";
+}
+._icon-sleeping-area:before {
+  content: "\e909";
+}
+._icon-toys:before {
+  content: "\e90a";
+}
+._icon-transportation:before {
+  content: "\e90b";
+}
+._icon-vitamins:before {
+  content: "\e90c";
+}

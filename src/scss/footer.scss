@@ -1,0 +1,132 @@
+//====================================================================================================
+.footer {
+  background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+
+  &__container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 56px 0 60px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 13.333%;
+    row-gap: 39px;
+    background: url(../img/footer/footer-puppy.png) bottom right / auto no-repeat;
+
+    @media (max-width:$pc){
+      padding: 30px 30px 375px;
+      justify-content: center;
+      column-gap: 8.4%;
+      background: url(../img/footer/footer-puppy.png) bottom center / auto no-repeat;
+      }
+
+      @media (max-width:$tablet){
+        padding: 30px 10px 309px;
+        flex-direction: column;
+        align-items: center;
+        background: url(../img/footer/footer-puppy.png) bottom center / 260px no-repeat;
+    }
+  }
+
+  &__contact-details-wrap {
+    max-width: 280px;
+  }
+
+  &__visit-details-wrap {
+    max-width: 302px;
+  }
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  row-gap: 43px;
+
+  @media (max-width:$tablet){
+    align-items: center;
+  }
+
+  &__title {
+    @extend %h3;
+    color: $color-light-xl;
+    letter-spacing: 0.06em;
+
+    @media (max-width:$tablet){
+      text-align: center;
+    }
+  }
+
+  &__email,
+  &__phone {
+    display: flex;
+    align-items: center;
+    column-gap: rem(20);
+    @extend %h4;
+    color: $color-primary;
+    letter-spacing: 0.06em;
+
+    &:hover {
+      color: $color-primary-light;
+    }
+  }
+
+  &__email {
+
+    &::before {
+      font-size: 26px;
+    }
+  }
+
+  &__phone {
+
+    &::before {
+      font-size: 32px;  
+    }
+  }
+}
+
+.visit-details {
+  display: flex;
+  flex-direction: column;
+  row-gap: 33px;
+
+  @media (max-width:$tablet){
+    row-gap: 39px;
+  }
+
+  &__title {
+    @extend %h3;
+    color: $color-light-xl;
+    letter-spacing: 0.06em;
+
+    @media (max-width:$tablet){
+      max-width: 270px;
+      align-self: center;
+      text-align: center;
+    }
+  }
+
+  &__boston-address,
+  &__london-address {
+    display: flex;
+    align-items: center;
+    column-gap: rem(17);
+    @extend %h4;
+    color: $color-primary;
+    letter-spacing: 0.06em;
+
+    &:hover {
+      color: $color-primary-light;
+    }
+
+    &::before {
+      font-size: rem(32);
+    }
+  }
+
+  &__boston-address,
+  &__london-address {}
+
+}
+
+
+//====================================================================================================

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Our friends"
+	})
+	<body>
+		<div class="wrapper">
+			<main class="page pets-page">
+				@@include('html/_header.htm',{})
+				<section class="our-friends-section section">
+					<div class="our-friends-section__container">
+						<h3 class="our-friends-section__tittle">Our friends who <br>
+							are looking for a house</h3>
+						<div class="our-friends-section__slider-wrap friends-slider">
+							<div class="friends-slider__view-window swiper-pets-page swiper">
+								<div class="friends-slider__items-inner-container swiper-wrapper">
+									
+								</div>
+							</div>
+							<div class="friends-slider__controls-wrap">
+								<button class="friends-slider__controls friends-slider__controls_to-first">&lt;&lt;</button>
+								<button class="friends-slider__controls friends-slider__controls_prev swiper-button-prev">&lt;</button>
+								<output class="friends-slider__controls friends-slider__controls_output">1</output>
+								<button class="friends-slider__controls friends-slider__controls_next swiper-button-next">&gt;</button>
+								<button class="friends-slider__controls friends-slider__controls_to-last">&gt;&gt;</button>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

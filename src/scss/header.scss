@@ -1,0 +1,300 @@
+//====================================================================================================
+$header-height: rem(180);
+
+.header {
+	display: flex;
+	align-items: center;
+	height: $header-height;
+
+	@media (max-width:$pc){
+		height: 120px;
+	}
+
+	&::after {
+		content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease 0s;
+    pointer-events: none;
+    z-index: 1;
+
+		.menu-open & {
+			opacity: 1;
+		}
+	}
+
+	.main-page & {
+		background-color: transparent;
+	}
+
+	.pets-page & {
+		position: fixed;
+		z-index: 2;
+		width: 100%;
+		height: 120px;
+		background-color: $color-light-xl;
+	}
+
+	&__container {
+		flex: 1 1 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+		margin-right: rem(40);
+
+		.menu-open & {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+
+	&__menu {}
+}
+
+.logo-header {
+	max-width: rem(186);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: rem(10);
+	transition: all 0.3s linear;
+
+	&:hover {
+		filter: drop-shadow(2px 4px 6px black);
+	}
+
+	&__title {
+		@extend %logo-title;
+
+		.main-page & {
+			color: $color-primary;
+		}
+	
+		.pets-page & {
+			color: $color-dark-l;
+		}
+	}
+
+	&__subtitle {
+		@extend %logo-subtitle;
+
+		.main-page & {
+			color: $color-light-xl;
+		}
+	
+		.pets-page & {
+			color: $color-dark-3xl;
+		}
+	}
+}
+
+.logo-mobile-menu {
+
+	&__title {
+		@extend %logo-title;
+		color: $color-primary;
+	}
+
+	&__subtitle {
+		@extend %logo-subtitle;
+		color: $color-light-xl;
+	}
+}
+
+.header-menu {
+
+	&__icon {}
+
+	&__body {
+
+		@media (max-width: $tablet) {
+			position: fixed;
+			z-index: 2;
+			top: 0;
+			right: -100%;
+			width: 320px;
+			height: 100%;
+			padding: rem(30) rem(10);
+			display: flex;
+			flex-direction: column;
+			row-gap: 30px;
+			background-color: $color-dark-3xl;
+			overflow: auto;
+			transition: all 0.3s linear;
+
+			.menu-open & {
+				right: 0;
+			}
+		}
+	}
+
+	&__mobile-menu-logo {
+		display: none;
+
+		@media (max-width:$tablet){
+			 display: flex; 
+		}
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		row-gap: 5px;
+		column-gap: rem(36);
+		@include adaptiveValue("column-gap", 36, 10, 768, 650);
+
+		@media (max-width:$tablet){
+			height: 100%;
+			flex-direction: column;
+			justify-content: center;
+			row-gap: rem(40);
+		}
+	}
+
+	&__item {}
+
+	&__link {
+		@extend %paragraph-l;
+		transition: all 0.3s linear;
+
+		@media (max-width:$tablet){
+			font-size: rem(32);
+		}
+
+		.main-page & {
+			color: $color-dark-s;
+
+			&:hover {
+				color: $color-light-s;
+			}
+		}
+	
+		.pets-page & {
+			color: $color-dark-l;
+
+			&:hover {
+				color: $color-dark-3xl;
+			}
+		}
+
+		.main-page &,
+		.pets-page & {
+		
+			@media (max-width:$tablet){
+				color: $color-dark-s;
+
+				&:hover {
+					color: $color-light-s;
+				}
+			}
+		}
+
+		.main-page &_about {
+			color: $color-light-s;
+		}
+
+		.pets-page &_pets {
+			color: $color-dark-3xl;
+
+			@media (max-width:$tablet){
+				color: $color-light-s;
+			}
+		}
+
+		.main-page &_about,
+		.pets-page &_pets {
+			position: relative;
+		
+			&::after {
+				content: '';
+				height: 2px;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: -5px;
+				background: $color-primary;
+		
+				@media (max-width:$tablet){
+					bottom: -10px;
+					color: $color-light-s;
+				}
+			}
+		}
+
+		// &_active {
+		// 	position: relative;
+		// 	color: $color-light-s;
+
+		// 	&::after {
+		// 		content: '';
+		// 		height: 2px;
+		// 		position: absolute;
+		// 		left: 0;
+		// 		right: 0;
+		// 		bottom: -5px;
+		// 		background: $color-primary;
+
+		// 		@media (max-width:$tablet){
+		// 			bottom: -10px;
+		// 		}
+		// 	}
+		// }
+	}
+}
+
+
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+	display: none;
+
+	@media (max-width: $tablet) {
+		display: block;
+		position: absolute;
+		top: rem(45);
+		right: rem(53);
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+		z-index: 5;
+		transition: all 0.3s linear;
+
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: $color-primary;
+		}
+		&::before {
+			top: 4px;
+		}
+		&::after {
+			bottom: 4px;
+		}
+		span {
+			top: calc(50% - 1px);
+		}
+
+		.menu-open & {
+			transform: rotate(90deg);
+		}
+
+	}
+}

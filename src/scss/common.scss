@@ -1,0 +1,209 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section {
+  padding: 80px 0 100px 0;
+
+  @media (max-width:$tablet){
+    padding: 42px 0;
+  }
+}
+
+// COLOR ====================================================================================================
+
+
+$color-primary: #F1CDB3;
+$color-primary-light: #FDDCC4;
+
+$color-dark-s: #CDCDCD;
+$color-dark-m: #B2B2B2;
+$color-dark-l: #545454;
+$color-dark-xl: #4C4C4C;
+$color-dark-3xl: #292929;
+
+$color-light-s: #FAFAFA;
+$color-light-l: #F6F6F6;
+$color-light-xl: #ffffff;
+
+// TEXT ====================================================================================================
+
+%logo-title,
+%h2,
+%h3,
+%h4,
+%h5, 
+%btn-text,
+%pets-card-title {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+}
+
+%logo-title {
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+
+%h2 {
+  font-size: rem(44);
+  // @include adaptiveValue("font-size", 44, 25, 769, 319);
+  line-height: 130%;
+}
+
+%h3 {
+  font-size: rem(35);
+  // @include adaptiveValue("font-size", 35, 25, 769, 319);
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+%h4 {
+  font-size: rem(20);
+  line-height: 115%;
+}
+
+%h5 {
+  font-size: rem(15);
+  line-height: 110%;
+}
+
+@media (max-width:$tablet){
+  
+  %h3 {
+    font-size: rem(25);
+  }
+}
+
+%logo-subtitle,
+%paragraph-l, 
+%paragraph-mobile-menu {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+%logo-subtitle {
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+}
+
+%paragraph-l {
+  font-size: rem(15);
+}
+
+%paragraph-mobile-menu {
+  font-size: rem(32);
+}
+
+%btn-text {
+  font-size: rem(17);
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+%pets-card-title {
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+
+%donation-description {
+  font-family: 'Arial';
+  font-style: italic;
+  font-weight: 400;
+  font-size: rem(12);
+  line-height: 150%;
+}
+
+
+// Buttons ====================================================================================================
+
+%btn-colored-style,
+%btn-transparent-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: rem(10) rem(30);
+  border-radius: 100px;
+  border: 2px solid #F1CDB3;
+  box-sizing: border-box;
+  @extend %btn-text;
+  transition: all 0.3s linear;
+  color: $color-dark-3xl;
+
+  &:hover {
+    background-color: $color-primary-light;
+  }
+
+  :active, 
+  :focus {
+    transform: scale(0.95);
+  }
+}
+
+%btn-colored-style {
+  background-color: $color-primary;
+}
+
+%btn-transparent-style {
+  background-color: transparent;
+}
+
+.btn_unactive,
+.swiper-button-disabled {
+  filter: grayscale(1);
+  pointer-events: none;
+}
+
+// General Elements ====================================================================================================
+
+.friend-card {
+  width: 100%;
+  max-width: 270px;
+  height: 100%;
+  max-height: 435px;
+  padding: 0 0 rem(30) 0;
+  // flex-basis: rem(270);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+  background-color: $color-light-s;
+  transition: all 0.3s linear;
+
+
+  &:hover {
+    cursor: pointer;
+    // transform: scale(1.05);
+    transform: scale(0.95);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+
+    & > button {
+      background-color: $color-primary-light;
+    }
+  }
+
+  &__img {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  &__title {
+    @extend %pets-card-title;
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+  }
+
+  &__learn-btn {
+    @extend %btn-transparent-style;
+    width: 69.26%;
+    max-width: 187px;
+    height: 52px;
+  }
+}
